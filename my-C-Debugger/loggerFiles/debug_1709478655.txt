@@ -1,0 +1,8 @@
+0001: Debug in file: main.c, on line: 6 = Hei hei 
+0002: Debug in file: main.c, on line: 8 = Hva skjer? 
+0003: Error in file: main.c, on line: 8 = Hva skjer? 
+0004: Debug in file: main.c, on line: 8 = Hva skjer? 
+0005: Debug in file: main.c, on line: 8 = Hva skjer? 
+0006: Debug in file: main.c, on line: 10 = Seeya! 
+0007: Debug in file: main.c, on line: 11 = This is a debug test 
+0008: Error in file: main.c, on line: 12 = This is an error test 

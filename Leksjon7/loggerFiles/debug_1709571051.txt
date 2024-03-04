@@ -1,0 +1,6 @@
+0001: Debug in file: myLinkedList.c, on line: 17 = All is good
+ 
+0002: Debug in file: myLinkedList.c, on line: 17 = All is good
+ 
+0003: Debug in file: myLinkedList.c, on line: 17 = All is good
+ 
