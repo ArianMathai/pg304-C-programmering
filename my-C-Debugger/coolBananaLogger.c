@@ -3,6 +3,7 @@
 #include <stdarg.h>
 #include <time.h>
 
+
 void coolBananaLogger(unsigned long ulErrorType, int iLine, const char *szFile, const char *pszFormat, ...){
 
     static FILE *ptLogFile = NULL;

@@ -1,17 +1,17 @@
 # makefile template
 
 INCLDIR = ./include
-TARGET = coolBananaLogger
+TARGET = myAlloc
 CC = gcc
 CFLAGS = -O2
 CFLAGS += -I$(INCLDIR)
 
 OBJDIR = obj
 
-_DEPS = coolBananaLogger.h
+_DEPS = myAlloc.h
 DEPS = $(patsubst %,$(INCLDIR)/%,$(_DEPS))
 
-_OBJS = coolBananaLogger.o main.o
+_OBJS = myAlloc.o main.o
 OBJS = $(patsubst %,$(OBJDIR)/%,$(_OBJS))
 
 $(OBJDIR)/%.o: %.c $(DEPS)

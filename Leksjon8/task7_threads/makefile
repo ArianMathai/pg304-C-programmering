@@ -1,25 +1,31 @@
 # makefile template
 
 INCLDIR = ./include
-TARGET = coolBananaLogger
+TARGET = task7
 CC = gcc
 CFLAGS = -O2
 CFLAGS += -I$(INCLDIR)
+TFLAG = -lpthread -lrt
+
+LIBDIR = ../my-C-Debugger
+LDFLAGS = -L$(LIBDIR) -lcoolBananaLogger
 
 OBJDIR = obj
 
-_DEPS = coolBananaLogger.h
+_DEPS = coolBananaLogger.h threadBuf.h
 DEPS = $(patsubst %,$(INCLDIR)/%,$(_DEPS))
 
-_OBJS = coolBananaLogger.o main.o
+_OBJS = task7_threads.o
 OBJS = $(patsubst %,$(OBJDIR)/%,$(_OBJS))
+
+
 
 $(OBJDIR)/%.o: %.c $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS)
 
 
 $(TARGET): $(OBJS)
-		$(CC) -o $@ $^ $(CFLAGS)
+		$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS) $(TFLAG)
 
 .PHONY: clean
 clean:

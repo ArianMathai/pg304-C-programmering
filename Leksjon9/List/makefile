@@ -1,18 +1,19 @@
 # makefile template
 
 INCLDIR = ./include
-TARGET = coolBananaLogger
+TARGET = list
 CC = gcc
 CFLAGS = -O2
 CFLAGS += -I$(INCLDIR)
 
 OBJDIR = obj
 
-_DEPS = coolBananaLogger.h
+_DEPS = list.h
 DEPS = $(patsubst %,$(INCLDIR)/%,$(_DEPS))
 
-_OBJS = coolBananaLogger.o main.o
+_OBJS = list.o main.o
 OBJS = $(patsubst %,$(OBJDIR)/%,$(_OBJS))
+
 
 $(OBJDIR)/%.o: %.c $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS)
