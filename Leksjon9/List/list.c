@@ -8,7 +8,7 @@
 
 #include "include/list.h"
 
-static NODE *CreateNode (void *pvData, int iSze)
+NODE *CreateNode (void *pvData, int iSze)
 {
    NODE *pThis = malloc (sizeof(NODE) + iSze);
    if (pThis != NULL) {
